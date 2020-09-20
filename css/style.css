@@ -1,0 +1,119 @@
+body {
+	background: url(../img/12_col.gif) center top repeat-y;
+	background-size: 90%;
+}
+#container {
+		width: 90%;
+		margin: 0 auto;
+		display: grid;
+		grid-template-columns: repeat(12, 1fr);
+		grid-gap: 20px;
+		grid-template-areas: 
+    "h h h h h h h h h h h h"
+    "b1 b1 b2 b2 b2 b2 b2 b2 b2 b2 b3 b3"
+    "c c c c c c c c c s s s"
+	"f f f f f f f f f f f f";
+	}
+	section {
+		border: 2px solid #333;
+		height: 150px;
+	}
+	.header {
+		grid-area: h;
+	  }
+	.box1 {
+		grid-area: b1;
+	  }
+	.box2 {
+		grid-area: b2;
+	  }
+	.box3 {
+		grid-area: b3;
+	  }
+	.content {
+		grid-area: c;
+	  }
+	.sidebar {
+		grid-area: s;
+	  }  
+	 
+	 
+	  .footer {
+		grid-area: f;
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr 1fr;
+		
+	}
+
+	.footer1, .footer2, .footer3, .footer4 {
+		margin: 10px;
+		border: 2px solid #333;
+		height: 125px;
+	
+	 }
+
+	 @media screen and (max-width: 1200px) {
+		#container {
+			width: 90%;
+			margin: 0 auto;
+		display: grid;
+		grid-template-columns: repeat(12, 1fr);
+		grid-template-areas: 
+    "h h h h h h h h h h h h"
+    "b1 b1 b1 b2 b2 b2 b2 b2 b2 b3 b3 b3"
+    "c c c c c c c c s s s s"
+	"f f f f f f f f f f f f";
+	}
+		} 
+	
+	@media screen and (max-width: 960px) {
+		#container {
+			width: 90%;
+			margin: 0 auto;
+		display: grid;
+		grid-template-columns: repeat(12, 1fr);
+		grid-template-areas: 
+    "h h h h h h h h h h h h"
+    "b1 b1 b1 b1 b2 b2 b2 b2 b3 b3 b3 b3"
+    "c c c c c c s s s s s s"
+	"f f f f f f f f f f f f";
+			} 
+	.footer {
+				grid-area: f;
+				display: grid;
+				grid-template-columns: 1fr 1fr;
+				height: 295px;
+				
+		
+		}
+	}
+
+		@media screen and (max-width: 768px) {
+			#container {
+				width: 90%;
+				margin: 0 auto;
+			display: grid;
+			grid-template-columns: auto;
+			grid-template-areas: 
+		"h"
+		"b1"
+		"b2"
+		"b3"
+		"c"
+		"s"
+		"f"
+		"f"
+		"f"
+		"f";
+			} 
+			.footer {
+				grid-area: f;
+				display: grid;
+				grid-template-columns: 1fr;
+				height: 600px;
+				grid-template-areas:
+				"f1"
+				"f2"
+				"f3"
+				"f4"
+		}}
